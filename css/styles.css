@@ -3,6 +3,11 @@
     --primario:#da595e;
     --obscuro:#484848;
     --claro:#ffffff;
+
+    --hospedaje:#275154;
+    --concierto:#da585e;
+    --clase:#598dda;
+    --paseo:#940ad4;
 }
 
 html{
@@ -100,4 +105,119 @@ form input[type="submit"]{
     border-radius: 10px;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.boton{
+    background-color: var(--claro);
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--obscuro);
+    font-weight: 400;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    -webkit-box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    -moz-box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    transition:all .3s ease-in-out ;    
+}
+
+.boton:hover{
+    background-color: var(--primario);
+    color: var(--claro);
+}
+
+/*Contneido Principal*/
+
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 1rem;
+}
+
+.cards img{
+    width: 100%;
+}
+
+.info .concierto{
+    color: var(--concierto);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .clase{
+    color:var(--clase);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .paseo{
+    color: var(--paseo);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .titulo{
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.info .precio{
+    font-size: .9rem;
+    color: var(--obscuro);
+}
+
+/*Premium*/
+.premium{
+    background-image: url(../img/hospedaje-pro.jpg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    grid-template-columns: unset;
+    height: 30rem;
+}
+
+@media (min-width:768px) {
+    .premium{
+        grid-template-columns: auto 30%;
+    }
+
+    .premium .info{
+        grid-column: 2/3;
+    }   
+}
+
+.premium .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.premium .info h3{
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--obscuro);
+    font-weight: 600;
+}
+
+@media (min-width:768px){
+    .premium .info h3{
+        text-align: right;
+    }
+}
+
+.info .hospedaje{
+    color:var(--obscuro);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 700;
 }
