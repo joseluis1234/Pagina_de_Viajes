@@ -221,3 +221,20 @@ form input[type="submit"]{
     font-size: .9rem;
     font-weight: 700;
 }
+
+/*Destinos Populares*/
+.destinos .contenedor-cards{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.destinos .cards{
+    position: relative;
+}
+
+.destinos .info{
+    position: absolute;
+    bottom:1rem;
+    left: 1rem;
+    color: var(--claro);
+    font-size: 2rem;
+}
