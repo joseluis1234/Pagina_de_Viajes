@@ -31,6 +31,7 @@ h3{
 }
 
 /*Interfaz*/
+
 .contenedor{
     max-width: 1100px;
     margin: 0 auto;
@@ -128,7 +129,31 @@ form input[type="submit"]{
     color: var(--claro);
 }
 
-/*Contneido Principal*/
+.btn-flotante{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--claro);
+    color: var(--obscuro);
+    padding: .5rem 2rem;
+    text-decoration: none;
+    -webkit-box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    -moz-box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    transition: all .3s ease-in-out;
+}
+
+.btn-flotante.activo{
+    background-color: var(--primario);
+    color: var(--claro);
+}
+
+.btn-flotante:hover, .btn-flotante.activo:hover {
+        background-color: var(--primario);
+        color: var(--claro);
+}
+
+/*Contenido Principal*/
 
 .contenedor-cards{
     display: grid;
@@ -237,4 +262,85 @@ form input[type="submit"]{
     left: 1rem;
     color: var(--claro);
     font-size: 2rem;
+}
+
+/*Footer*/
+
+.footer{
+    position: fixed;
+    bottom: -100%;
+    background-color: var(--claro);
+    width: 100%;
+    -webkit-box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    -moz-box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    box-shadow: 3px 7px 10px 7px rgba(0,0,0,0.37);
+    transition: all .3s ease-in;
+    padding: 4rem 0;
+}
+.footer.activo{
+    bottom: 0;
+}
+ 
+.nav-footer{
+    padding: 1rem;
+}
+
+.nav-footer h3{
+    font-size: 1.2rem;
+}
+
+.nav-footer a{
+    display: block;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    color: var(--obscuro);
+}
+
+.nav-footer a:last-of-type{
+    margin: 0;
+}
+
+.sociales ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* justify-content: flex-end; */
+    /* /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    flex:1 0 auto;
+    list-style: none;
+}
+.sociales ul li {
+    margin-right: 1rem;
+}
+.sociales ul li:last-of-type {
+    margin-right: 0;
+}
+.sociales ul li a {
+    text-decoration: none;
+}
+.sociales ul li a:before {
+    font-family: "Font Awesome 5 Brands";
+    color: var(--obscuro);
+    font-size: 1.8rem;
+}
+.sociales ul li a[href*='facebook.com']::before {
+    content: "\f39e";
+}
+ 
+.sociales ul li a[href*='twitter.com']::before {
+    content: "\f099";
+}
+.sociales ul li a[href*='youtube.com']::before {
+    content: "\f431";
+}
+.sociales ul li a[href*='instagram.com']::before {
+    content: "\f16d";
+}
+.sociales ul li a[href*='pinterest.com']::before {
+    content: "\f231 ";
+}
+.sociales ul li span{
+    display: none;
 }
